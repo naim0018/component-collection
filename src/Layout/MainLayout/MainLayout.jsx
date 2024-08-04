@@ -11,8 +11,6 @@ const items1 = ['Home', 'About us', 'Login'].map((key) => ({
     label: `${key}`,
   }));
   // SideNav
-
-  //[Card,Accordion,ErrorPage,Input,LogIn,Pricing,ProductCollection,Search,SignUp]
   const items2 = sidebarRoute.map((nav, index) => {
     const key = String(index + 1);
     return {

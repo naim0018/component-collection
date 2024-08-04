@@ -12,20 +12,20 @@ const Container = ({ children, code }) => {
   return (
     <div className=" border-2 border-black">
       <div className=" p-3 bg-black  flex items-center justify-between px-10">
-        <button
+        <div
           className="bg-white px-5 py-2 font-semibold"
           onClick={() => setToggle(!toggle)}
         >
           {toggle ? "Code" : "Preview"}
-        </button>
-        <button className="text-white flex items-center justify-center gap-2 ">
+        </div>
+        <div className="text-white flex items-center justify-center gap-2 ">
           {copy ? (
-            <button className="flex items-center">
+            <div className="flex items-center">
               <IoMdCheckmarkCircleOutline className="text-lg mr-2" />
               Copied
-            </button>
+            </div>
           ) : (
-            <button className="flex items-center"    onClick={() => {
+            <div className="flex items-center"    onClick={() => {
                 navigator.clipboard.writeText(code)
                 setCopy(!copy)
                 setTimeout(()=>{
@@ -34,9 +34,9 @@ const Container = ({ children, code }) => {
             }}>
               <FaRegCopy className="text-lg mr-2" />
               Copy
-            </button>
+            </div>
           )}
-        </button>
+        </div>
       </div>
       <div className={toggle ? "p-10" : ""}>
         {toggle ? (
@@ -45,9 +45,10 @@ const Container = ({ children, code }) => {
           <SyntaxHighlighter
             language="jsx"
             style={nightOwl}
-            customStyle={{ padding: "20px",maxHeight:'600px' }}
+            customStyle={{ padding: "20px",maxHeight:'600px', whiteSpace: 'normal'}}
             showLineNumbers={true}
-            wrapLongLines={true}
+            // wrapLines={true}
+            // wrapLongLines={true}
           >
             {code}
           </SyntaxHighlighter>
