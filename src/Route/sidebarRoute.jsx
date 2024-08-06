@@ -1,4 +1,5 @@
 import Accordion from "../Component/Accordion/Accordion";
+import Button from "../Component/Button/Button";
 import Card from "../Component/Card/Card";
 import CardDetails from "../Component/CardDetails/CardDetails";
 import ContactUs from "../Component/ContactUs/ContactUs";
@@ -11,9 +12,11 @@ import Menu from "../Component/Menu/Menu";
 import Navbar from "../Component/Navbar/Navbar";
 import Pricing from "../Component/Pricing/Pricing";
 import ProductCollection from "../Component/ProductCollection/ProductCollection";
+import Reviews from "../Component/Reviews/Reviews";
 import Search from "../Component/Search/Search";
 import SignUp from "../Component/SignUp/SignUp";
 import SignIn from "../Component/SingIn/SignIn";
+import Switch from "../Component/Switch/Switch";
 
 const sidebarRoute = [
   {
@@ -50,6 +53,16 @@ const sidebarRoute = [
     name: "Card-Details",
     path: "card-details",
     element: <CardDetails/>,
+  },
+  {
+    name: "Switch",
+    path: "switch",
+    element: <Switch/>,
+  },
+  {
+    name: "Button",
+    path: "button",
+    element: <Button/>,
   },
   {
     name: "Menu",
@@ -95,6 +108,11 @@ const sidebarRoute = [
     name: "Gallery",
     path: "gallery",
     element: <Gallery/>,
+  },
+  {
+    name: "Reviews",
+    path: "reviews",
+    element: <Reviews/>,
   },
 ];
 export default sidebarRoute;
