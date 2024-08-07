@@ -8,6 +8,7 @@ import Gallery from "../Component/Gallery/Gallery";
 import Hero from "../Component/Hero/Hero";
 import InfoCard from "../Component/InfoCard/InfoCard";
 import Input from "../Component/Input/Input";
+import Loading from "../Component/Loading/Loading";
 import Menu from "../Component/Menu/Menu";
 import Navbar from "../Component/Navbar/Navbar";
 import Pricing from "../Component/Pricing/Pricing";
@@ -16,6 +17,7 @@ import Reviews from "../Component/Reviews/Reviews";
 import Search from "../Component/Search/Search";
 import SignUp from "../Component/SignUp/SignUp";
 import SignIn from "../Component/SingIn/SignIn";
+import Social from "../Component/Social/Social";
 import Switch from "../Component/Switch/Switch";
 
 const sidebarRoute = [
@@ -65,6 +67,11 @@ const sidebarRoute = [
     element: <Button/>,
   },
   {
+    name: "Social",
+    path: "social",
+    element: <Social/>,
+  },
+  {
     name: "Menu",
     path: "menu",
     element: <Menu />,
@@ -73,6 +80,11 @@ const sidebarRoute = [
     name: "Accordion",
     path: "accordion",
     element: <Accordion />,
+  },
+  {
+    name: "Loading",
+    path: "loading",
+    element: <Loading />,
   },
   {
     name: "ErrorPage",

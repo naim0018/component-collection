@@ -38,7 +38,7 @@ const Search01 = () => {
    `
   return (
   <Container code={code}>
-    <div className="relative">
+    <div className="relative w-96 mx-auto">
   <label htmlFor="Search" className="sr-only"> Search for... </label>
 
   <input
