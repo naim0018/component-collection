@@ -11,6 +11,7 @@ import Button10 from "./Button10"
 import Button11 from "./Button11"
 import Button12 from "./Button12"
 import Button13 from "./Button13"
+import Button14 from "./Button14"
 
 const Button = () => {
   return (
@@ -28,6 +29,7 @@ const Button = () => {
         <Button11/>
         <Button12/>
         <Button13/>
+        <Button14/>
     </div>
   )
 }
