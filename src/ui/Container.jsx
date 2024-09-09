@@ -8,6 +8,7 @@ import { IoMdCheckmarkCircleOutline } from "react-icons/io";
 const Container = ({ children, code }) => {
   const [toggle, setToggle] = useState(true);
   const [copy, setCopy] = useState(false);
+  console.log(copy,toggle)
 
   return (
     <div className=" border-2 border-black">

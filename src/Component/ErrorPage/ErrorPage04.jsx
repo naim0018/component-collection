@@ -2,7 +2,7 @@ import Container from "../../ui/Container";
 
 const ErrorPage04 = () => {
     const code =`<div className=" relative w-full h-screen">
-        <div className="absolute z-10 -top-24 w-full h-full flex flex-col items-center justify-center px-2 md:px-0">
+        <div className="absolute z-10 w-full top-24 flex flex-col items-center justify-center px-2 md:px-0">
           <h1 className="text-[200px] font-medium text-[#FA7C70]">404</h1>
           <h2 className="text-[42px] font-bold ">Page not found</h2>
           <p className="font-bold pt-2 text-center">
@@ -35,9 +35,9 @@ const ErrorPage04 = () => {
         />
       </div>`
   return (
-    <Container code={code}>
-      <div className=" relative w-full h-screen">
-        <div className="absolute z-10 -top-24 w-full h-full flex flex-col items-center justify-center px-2 md:px-0">
+   <Container code={code}>
+       <div className=" relative w-full h-screen">
+        <div className="absolute z-10 w-full top-24 flex flex-col items-center justify-center px-2 md:px-0">
           <h1 className="text-[200px] font-medium text-[#FA7C70]">404</h1>
           <h2 className="text-[42px] font-bold ">Page not found</h2>
           <p className="font-bold pt-2 text-center">
@@ -69,7 +69,7 @@ const ErrorPage04 = () => {
           alt=""
         />
       </div>
-    </Container>
+   </Container>
   );
 };
 export default ErrorPage04;
