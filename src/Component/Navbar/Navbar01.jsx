@@ -1,521 +1,412 @@
 import Container from "../../ui/Container";
 
 const Navbar01 = () => {
-    const code=` <nav className="relative bg-white shadow dark:bg-gray-800">
-        <div className="container px-6 py-3 mx-auto">
-          <div className="flex flex-col md:flex-row md:justify-between md:items-center">
-            <div className="flex items-center justify-between">
-              <div className="flex items-center">
-                <a href="#">
-                  <img
-                    className="w-auto h-6 sm:h-7"
-                    src="https://merakiui.com/images/full-logo.svg"
-                    alt=""
-                  />
-                </a>
-                <div className="hidden mx-10 md:block">
-                  <div className="relative">
-                    <span className="absolute inset-y-0 left-0 flex items-center pl-3">
-                      <svg
-                        className="w-5 h-5 text-gray-400"
-                        viewBox="0 0 24 24"
-                        fill="none"
-                      >
-                        <path
-                          d="M21 21L15 15M17 10C17 13.866 13.866 17 10 17C6.13401 17 3 13.866 3 10C3 6.13401 6.13401 3 10 3C13.866 3 17 6.13401 17 10Z"
-                          stroke="currentColor"
-                          strokeWidth="2"
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                        ></path>
-                      </svg>
-                    </span>
-
-                    <input
-                      type="text"
-                      className="w-full py-2 pl-10 pr-4 text-gray-700 bg-white border rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 dark:focus:border-blue-300 focus:outline-none focus:ring focus:ring-opacity-40 focus:ring-blue-300"
-                      placeholder="Search"
-                    />
-                  </div>
-                </div>
-              </div>
-              <div className="flex lg:hidden">
-                <button
-                  type="button"
-                  className="text-gray-500 dark:text-gray-200 hover:text-gray-600 dark:hover:text-gray-400 focus:outline-none focus:text-gray-600 dark:focus:text-gray-400"
-                  aria-label="toggle menu"
-                >
-                  <svg
-                    //  x-show="!isOpen"
-                    xmlns="http://www.w3.org/2000/svg"
-                    className="w-6 h-6"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                    strokeWidth="2"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      d="M4 8h16M4 16h16"
-                    />
-                  </svg>
-
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    className="w-6 h-6"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                    strokeWidth="2"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      d="M6 18L18 6M6 6l12 12"
-                    />
-                  </svg>
-                </button>
-              </div>
-            </div>
-
-            <div className="absolute inset-x-0 z-20 w-full px-6 py-2 transition-all duration-300 ease-in-out bg-white top-24 dark:bg-gray-800 md:mt-0 md:p-0 md:top-0 md:relative md:bg-transparent md:w-auto md:opacity-100 md:translate-x-0 md:flex md:items-center">
-              <div className="flex flex-col md:flex-row md:mx-1">
-                <a
-                  className="my-2 text-sm leading-5 text-gray-700 transition-colors duration-300 transform dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400 hover:underline md:mx-4 md:my-0"
-                  href="#"
-                >
-                  Home
-                </a>
-                <a
-                  className="my-2 text-sm leading-5 text-gray-700 transition-colors duration-300 transform dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400 hover:underline md:mx-4 md:my-0"
-                  href="#"
-                >
-                  Blog
-                </a>
-                <a
-                  className="my-2 text-sm leading-5 text-gray-700 transition-colors duration-300 transform dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400 hover:underline md:mx-4 md:my-0"
-                  href="#"
-                >
-                  Compoents
-                </a>
-                <a
-                  className="my-2 text-sm leading-5 text-gray-700 transition-colors duration-300 transform dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400 hover:underline md:mx-4 md:my-0"
-                  href="#"
-                >
-                  Courses
-                </a>
-              </div>
-
-              <div className="my-4 md:hidden">
-                <div className="relative">
-                  <span className="absolute inset-y-0 left-0 flex items-center pl-3">
-                    <svg
-                      className="w-5 h-5 text-gray-400"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                    >
-                      <path
-                        d="M21 21L15 15M17 10C17 13.866 13.866 17 10 17C6.13401 17 3 13.866 3 10C3 6.13401 6.13401 3 10 3C13.866 3 17 6.13401 17 10Z"
-                        stroke="currentColor"
-                        strokeWidth="2"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                      ></path>
-                    </svg>
+  const code = `<nav className="relative bg-white shadow dark:bg-gray-800">
+        <div className="container px-6 py-4 mx-auto">
+          <div className="flex items-center justify-between">
+            {/* Logo & Search */}
+            <div className="flex items-center space-x-8">
+              <a href="#" className="flex items-center">
+                <div className="h-6 w-6 sm:h-8 sm:w-8 md:h-10 md:w-10 rounded-lg bg-gradient-to-r from-blue-500 to-purple-600 flex items-center justify-center">
+                  <span className="text-white font-bold text-xs sm:text-sm md:text-base lg:text-lg">
+                    UI
                   </span>
+                </div>
+                <span className="ml-2 text-base font-semibold text-gray-800 dark:text-white sm:text-lg md:text-xl lg:text-2xl">
+                  Collection
+                </span>
+              </a>
 
+              <div className="hidden md:block">
+                <div className="relative">
                   <input
                     type="text"
-                    className="w-full py-2 pl-10 pr-4 text-gray-700 bg-white border rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 dark:focus:border-blue-300 focus:outline-none focus:ring focus:ring-opacity-40 focus:ring-blue-300"
-                    placeholder="Search"
+                    className="w-72 px-4 py-2.5 text-sm text-gray-700 bg-gray-50 rounded-lg border border-gray-200 focus:border-blue-400 focus:ring-2 focus:ring-blue-100 dark:bg-gray-700 dark:border-gray-600 dark:text-gray-300"
+                    placeholder="Search..."
                   />
+                  <button className="absolute right-3 top-1/2 -translate-y-1/2">
+                    <svg
+                      className="w-5 h-5 text-gray-400"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+                      />
+                    </svg>
+                  </button>
                 </div>
               </div>
             </div>
+
+            {/* Main Navigation */}
+            <div className="hidden md:flex items-center space-x-8">
+              <a
+                href="#"
+                className="text-gray-700 hover:text-blue-500 dark:text-gray-200 dark:hover:text-blue-400"
+              >
+                Home
+              </a>
+              <a
+                href="#"
+                className="text-gray-700 hover:text-blue-500 dark:text-gray-200 dark:hover:text-blue-400"
+              >
+                Products
+              </a>
+              <a
+                href="#"
+                className="text-gray-700 hover:text-blue-500 dark:text-gray-200 dark:hover:text-blue-400"
+              >
+                Resources
+              </a>
+              <a
+                href="#"
+                className="text-gray-700 hover:text-blue-500 dark:text-gray-200 dark:hover:text-blue-400"
+              >
+                Pricing
+              </a>
+            </div>
+
+            {/* Right Buttons */}
+            <div className="flex items-center space-x-4">
+              <div className="hidden md:flex items-center space-x-2">
+                <button className="px-4 py-2 text-sm font-medium text-gray-700 hover:text-blue-500 dark:text-gray-200">
+                  Sign in
+                </button>
+                <span className="text-gray-300 dark:text-gray-600">/</span>
+                <button className="px-4 py-2 text-sm font-medium text-white bg-blue-500 rounded-lg hover:bg-blue-600">
+                  Sign up
+                </button>
+              </div>
+
+              {/* Mobile menu button */}
+              <button className="md:hidden text-gray-500 hover:text-gray-600 dark:text-gray-200">
+                <svg
+                  className="w-6 h-6"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M4 6h16M4 12h16M4 18h16"
+                  />
+                </svg>
+              </button>
+            </div>
           </div>
 
-          <div className="py-3 mt-3 -mx-3 overflow-y-auto whitespace-nowrap scroll-hidden">
-            <a
-              className="mx-4 text-sm leading-5 text-gray-700 transition-colors duration-300 transform dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400 hover:underline md:my-0"
-              href="#"
-            >
-              News
-            </a>
-            <a
-              className="mx-4 text-sm leading-5 text-gray-700 transition-colors duration-300 transform dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400 hover:underline md:my-0"
-              href="#"
-            >
-              Articles
-            </a>
-            <a
-              className="mx-4 text-sm leading-5 text-gray-700 transition-colors duration-300 transform dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400 hover:underline md:my-0"
-              href="#"
-            >
-              Videos
-            </a>
-            <a
-              className="mx-4 text-sm leading-5 text-gray-700 transition-colors duration-300 transform dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400 hover:underline md:my-0"
-              href="#"
-            >
-              Tricks
-            </a>
-            <a
-              className="mx-4 text-sm leading-5 text-gray-700 transition-colors duration-300 transform dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400 hover:underline md:my-0"
-              href="#"
-            >
-              PHP
-            </a>
-            <a
-              className="mx-4 text-sm leading-5 text-gray-700 transition-colors duration-300 transform dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400 hover:underline md:my-0"
-              href="#"
-            >
-              Laravel
-            </a>
-            <a
-              className="mx-4 text-sm leading-5 text-gray-700 transition-colors duration-300 transform dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400 hover:underline md:my-0"
-              href="#"
-            >
-              Vue
-            </a>
-            <a
-              className="mx-4 text-sm leading-5 text-gray-700 transition-colors duration-300 transform dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400 hover:underline md:my-0"
-              href="#"
-            >
-              React
-            </a>
-            <a
-              className="mx-4 text-sm leading-5 text-gray-700 transition-colors duration-300 transform dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400 hover:underline md:my-0"
-              href="#"
-            >
-              Tailwindcss
-            </a>
-            <a
-              className="mx-4 text-sm leading-5 text-gray-700 transition-colors duration-300 transform dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400 hover:underline md:my-0"
-              href="#"
-            >
-              Meraki UI
-            </a>
-            <a
-              className="mx-4 text-sm leading-5 text-gray-700 transition-colors duration-300 transform dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400 hover:underline md:my-0"
-              href="#"
-            >
-              CPP
-            </a>
-            <a
-              className="mx-4 text-sm leading-5 text-gray-700 transition-colors duration-300 transform dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400 hover:underline md:my-0"
-              href="#"
-            >
-              JavaScript
-            </a>
-            <a
-              className="mx-4 text-sm leading-5 text-gray-700 transition-colors duration-300 transform dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400 hover:underline md:my-0"
-              href="#"
-            >
-              Ruby
-            </a>
-            <a
-              className="mx-4 text-sm leading-5 text-gray-700 transition-colors duration-300 transform dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400 hover:underline md:my-0"
-              href="#"
-            >
-              Mysql
-            </a>
-            <a
-              className="mx-4 text-sm leading-5 text-gray-700 transition-colors duration-300 transform dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400 hover:underline md:my-0"
-              href="#"
-            >
-              Pest
-            </a>
-            <a
-              className="mx-4 text-sm leading-5 text-gray-700 transition-colors duration-300 transform dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400 hover:underline md:my-0"
-              href="#"
-            >
-              PHPUnit
-            </a>
-            <a
-              className="mx-4 text-sm leading-5 text-gray-700 transition-colors duration-300 transform dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400 hover:underline md:my-0"
-              href="#"
-            >
-              Netlify
-            </a>
-            <a
-              className="mx-4 text-sm leading-5 text-gray-700 transition-colors duration-300 transform dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400 hover:underline md:my-0"
-              href="#"
-            >
-              VS Code
-            </a>
-            <a
-              className="mx-4 text-sm leading-5 text-gray-700 transition-colors duration-300 transform dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400 hover:underline md:my-0"
-              href="#"
-            >
-              PHPStorm
-            </a>
-            <a
-              className="mx-4 text-sm leading-5 text-gray-700 transition-colors duration-300 transform dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400 hover:underline md:my-0"
-              href="#"
-            >
-              Sublime
-            </a>
+          {/* Mobile Search - Visible only on mobile */}
+          <div className="mt-4 md:hidden">
+            <div className="relative">
+              <input
+                type="text"
+                className="w-full px-4 py-2.5 text-sm text-gray-700 bg-gray-50 rounded-lg border border-gray-200 focus:border-blue-400 focus:ring-2 focus:ring-blue-100 dark:bg-gray-700 dark:border-gray-600 dark:text-gray-300"
+                placeholder="Search..."
+              />
+              <button className="absolute right-3 top-1/2 -translate-y-1/2">
+                <svg
+                  className="w-5 h-5 text-gray-400"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+                  />
+                </svg>
+              </button>
+            </div>
+          </div>
+
+          {/* Mobile Navigation Menu */}
+          <div className="md:hidden mt-4 border-t border-gray-100 dark:border-gray-700 pt-4">
+            <nav className="flex flex-col space-y-2">
+              <a href="#" className="text-gray-700 hover:text-blue-500 dark:text-gray-200 dark:hover:text-blue-400 py-2">
+                Home
+              </a>
+              <a href="#" className="text-gray-700 hover:text-blue-500 dark:text-gray-200 dark:hover:text-blue-400 py-2">
+                Products
+              </a>
+              <a href="#" className="text-gray-700 hover:text-blue-500 dark:text-gray-200 dark:hover:text-blue-400 py-2">
+                Resources
+              </a>
+              <a href="#" className="text-gray-700 hover:text-blue-500 dark:text-gray-200 dark:hover:text-blue-400 py-2">
+                Pricing
+              </a>
+              <a href="#" className="text-gray-700 hover:text-blue-500 dark:text-gray-200 dark:hover:text-blue-400 py-2">
+                About Us
+              </a>
+              <a href="#" className="text-gray-700 hover:text-blue-500 dark:text-gray-200 dark:hover:text-blue-400 py-2">
+                Contact
+              </a>
+            </nav>
+
+            <div className="mt-4 flex flex-col space-y-2">
+              <button className="w-full px-4 py-2 text-sm font-medium text-gray-700 hover:text-blue-500 dark:text-gray-200 border border-gray-200 dark:border-gray-600 rounded-lg">
+                Sign in
+              </button>
+              <button className="w-full px-4 py-2 text-sm font-medium text-white bg-blue-500 rounded-lg hover:bg-blue-600">
+                Sign up
+              </button>
+            </div>
+          </div>
+
+          {/* Categories Bar */}
+          <div className="mt-4 -mx-6 px-6 py-2 border-t border-gray-100 dark:border-gray-700 overflow-x-auto whitespace-nowrap scrollbar-hide">
+            <div className="flex justify-center space-x-8">
+              <a
+                href="#"
+                className="text-sm text-gray-600 hover:text-blue-500 dark:text-gray-300"
+              >
+                Development
+              </a>
+              <a
+                href="#"
+                className="text-sm text-gray-600 hover:text-blue-500 dark:text-gray-300"
+              >
+                Design
+              </a>
+              <a
+                href="#"
+                className="text-sm text-gray-600 hover:text-blue-500 dark:text-gray-300"
+              >
+                Marketing
+              </a>
+              <a
+                href="#"
+                className="text-sm text-gray-600 hover:text-blue-500 dark:text-gray-300"
+              >
+                Business
+              </a>
+              <a
+                href="#"
+                className="text-sm text-gray-600 hover:text-blue-500 dark:text-gray-300"
+              >
+                Lifestyle
+              </a>
+              <a
+                href="#"
+                className="text-sm text-gray-600 hover:text-blue-500 dark:text-gray-300"
+              >
+                Photography
+              </a>
+              <a
+                href="#"
+                className="text-sm text-gray-600 hover:text-blue-500 dark:text-gray-300"
+              >
+                Music
+              </a>
+            </div>
           </div>
         </div>
-      </nav>`
+      </nav>`;
   return (
     <Container code={code}>
       <nav className="relative bg-white shadow dark:bg-gray-800">
-        <div className="container px-6 py-3 mx-auto">
-          <div className="flex flex-col md:flex-row md:justify-between md:items-center">
-            <div className="flex items-center justify-between">
-              <div className="flex items-center">
-                <a href="#">
-                  <img
-                    className="w-auto h-6 sm:h-7"
-                    src="https://merakiui.com/images/full-logo.svg"
-                    alt=""
-                  />
-                </a>
-                <div className="hidden mx-10 md:block">
-                  <div className="relative">
-                    <span className="absolute inset-y-0 left-0 flex items-center pl-3">
-                      <svg
-                        className="w-5 h-5 text-gray-400"
-                        viewBox="0 0 24 24"
-                        fill="none"
-                      >
-                        <path
-                          d="M21 21L15 15M17 10C17 13.866 13.866 17 10 17C6.13401 17 3 13.866 3 10C3 6.13401 6.13401 3 10 3C13.866 3 17 6.13401 17 10Z"
-                          stroke="currentColor"
-                          strokeWidth="2"
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                        ></path>
-                      </svg>
-                    </span>
-
-                    <input
-                      type="text"
-                      className="w-full py-2 pl-10 pr-4 text-gray-700 bg-white border rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 dark:focus:border-blue-300 focus:outline-none focus:ring focus:ring-opacity-40 focus:ring-blue-300"
-                      placeholder="Search"
-                    />
-                  </div>
+        <div className="container px-6 py-4 mx-auto max-w-7xl">
+          <div className="flex items-center justify-between">
+            {/* Logo & Search */}
+            <div className="flex items-center space-x-4 lg:space-x-8">
+              <a href="#" className="flex items-center">
+                <div className="h-6 w-6 sm:h-8 sm:w-8 md:h-10 md:w-10 rounded-lg bg-gradient-to-r from-blue-500 to-purple-600 flex items-center justify-center">
+                  <span className="text-white font-bold text-xs sm:text-sm md:text-base lg:text-lg">
+                    UI
+                  </span>
                 </div>
-              </div>
-              <div className="flex lg:hidden">
-                <button
-                  type="button"
-                  className="text-gray-500 dark:text-gray-200 hover:text-gray-600 dark:hover:text-gray-400 focus:outline-none focus:text-gray-600 dark:focus:text-gray-400"
-                  aria-label="toggle menu"
-                >
-                  <svg
-                    //  x-show="!isOpen"
-                    xmlns="http://www.w3.org/2000/svg"
-                    className="w-6 h-6"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                    strokeWidth="2"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      d="M4 8h16M4 16h16"
-                    />
-                  </svg>
+                <span className="ml-2 text-base font-semibold text-gray-800 dark:text-white sm:text-lg md:text-xl lg:text-2xl">
+                  Collection
+                </span>
+              </a>
 
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    className="w-6 h-6"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                    strokeWidth="2"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      d="M6 18L18 6M6 6l12 12"
-                    />
-                  </svg>
-                </button>
+              <div className="hidden md:block">
+                <div className="relative">
+                  <input
+                    type="text"
+                    className="w-72 lg:w-96 px-4 py-2.5 text-sm text-gray-700 bg-gray-50 rounded-lg border border-gray-200 focus:border-blue-400 focus:ring-2 focus:ring-blue-100 dark:bg-gray-700 dark:border-gray-600 dark:text-gray-300"
+                    placeholder="Search..."
+                  />
+                  <button className="absolute right-3 top-1/2 -translate-y-1/2">
+                    <svg
+                      className="w-5 h-5 text-gray-400"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+                      />
+                    </svg>
+                  </button>
+                </div>
               </div>
             </div>
 
-            <div className="absolute inset-x-0 z-20 w-full px-6 py-2 transition-all duration-300 ease-in-out bg-white top-24 dark:bg-gray-800 md:mt-0 md:p-0 md:top-0 md:relative md:bg-transparent md:w-auto md:opacity-100 md:translate-x-0 md:flex md:items-center">
-              <div className="flex flex-col md:flex-row md:mx-1">
-                <a
-                  className="my-2 text-sm leading-5 text-gray-700 transition-colors duration-300 transform dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400 hover:underline md:mx-4 md:my-0"
-                  href="#"
-                >
-                  Home
-                </a>
-                <a
-                  className="my-2 text-sm leading-5 text-gray-700 transition-colors duration-300 transform dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400 hover:underline md:mx-4 md:my-0"
-                  href="#"
-                >
-                  Blog
-                </a>
-                <a
-                  className="my-2 text-sm leading-5 text-gray-700 transition-colors duration-300 transform dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400 hover:underline md:mx-4 md:my-0"
-                  href="#"
-                >
-                  Compoents
-                </a>
-                <a
-                  className="my-2 text-sm leading-5 text-gray-700 transition-colors duration-300 transform dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400 hover:underline md:mx-4 md:my-0"
-                  href="#"
-                >
-                  Courses
-                </a>
+            {/* Main Navigation */}
+            <div className="hidden md:flex items-center space-x-4 lg:space-x-8">
+              <a
+                href="#"
+                className="text-gray-700 hover:text-blue-500 dark:text-gray-200 dark:hover:text-blue-400 text-sm lg:text-base"
+              >
+                Home
+              </a>
+              <a
+                href="#"
+                className="text-gray-700 hover:text-blue-500 dark:text-gray-200 dark:hover:text-blue-400 text-sm lg:text-base"
+              >
+                Products
+              </a>
+              
+            </div>
+
+            {/* Right Buttons */}
+            <div className="flex items-center space-x-4">
+              <div className="hidden md:flex items-center space-x-2 lg:space-x-4">
+                <button className="px-4 py-2 text-sm lg:text-base font-medium text-gray-700 hover:text-blue-500 dark:text-gray-200">
+                  Sign in
+                </button>
+                <span className="text-gray-300 dark:text-gray-600">/</span>
+                <button className="px-4 py-2 text-sm lg:text-base font-medium text-white bg-blue-500 rounded-lg hover:bg-blue-600">
+                  Sign up
+                </button>
               </div>
 
-              <div className="my-4 md:hidden">
-                <div className="relative">
-                  <span className="absolute inset-y-0 left-0 flex items-center pl-3">
-                    <svg
-                      className="w-5 h-5 text-gray-400"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                    >
-                      <path
-                        d="M21 21L15 15M17 10C17 13.866 13.866 17 10 17C6.13401 17 3 13.866 3 10C3 6.13401 6.13401 3 10 3C13.866 3 17 6.13401 17 10Z"
-                        stroke="currentColor"
-                        strokeWidth="2"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                      ></path>
-                    </svg>
-                  </span>
-
-                  <input
-                    type="text"
-                    className="w-full py-2 pl-10 pr-4 text-gray-700 bg-white border rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 dark:focus:border-blue-300 focus:outline-none focus:ring focus:ring-opacity-40 focus:ring-blue-300"
-                    placeholder="Search"
+              {/* Mobile menu button */}
+              <button className="md:hidden text-gray-500 hover:text-gray-600 dark:text-gray-200">
+                <svg
+                  className="w-6 h-6"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M4 6h16M4 12h16M4 18h16"
                   />
-                </div>
-              </div>
+                </svg>
+              </button>
             </div>
           </div>
 
-          <div className="py-3 mt-3 -mx-3 overflow-y-auto whitespace-nowrap scroll-hidden">
-            <a
-              className="mx-4 text-sm leading-5 text-gray-700 transition-colors duration-300 transform dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400 hover:underline md:my-0"
-              href="#"
-            >
-              News
-            </a>
-            <a
-              className="mx-4 text-sm leading-5 text-gray-700 transition-colors duration-300 transform dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400 hover:underline md:my-0"
-              href="#"
-            >
-              Articles
-            </a>
-            <a
-              className="mx-4 text-sm leading-5 text-gray-700 transition-colors duration-300 transform dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400 hover:underline md:my-0"
-              href="#"
-            >
-              Videos
-            </a>
-            <a
-              className="mx-4 text-sm leading-5 text-gray-700 transition-colors duration-300 transform dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400 hover:underline md:my-0"
-              href="#"
-            >
-              Tricks
-            </a>
-            <a
-              className="mx-4 text-sm leading-5 text-gray-700 transition-colors duration-300 transform dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400 hover:underline md:my-0"
-              href="#"
-            >
-              PHP
-            </a>
-            <a
-              className="mx-4 text-sm leading-5 text-gray-700 transition-colors duration-300 transform dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400 hover:underline md:my-0"
-              href="#"
-            >
-              Laravel
-            </a>
-            <a
-              className="mx-4 text-sm leading-5 text-gray-700 transition-colors duration-300 transform dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400 hover:underline md:my-0"
-              href="#"
-            >
-              Vue
-            </a>
-            <a
-              className="mx-4 text-sm leading-5 text-gray-700 transition-colors duration-300 transform dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400 hover:underline md:my-0"
-              href="#"
-            >
-              React
-            </a>
-            <a
-              className="mx-4 text-sm leading-5 text-gray-700 transition-colors duration-300 transform dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400 hover:underline md:my-0"
-              href="#"
-            >
-              Tailwindcss
-            </a>
-            <a
-              className="mx-4 text-sm leading-5 text-gray-700 transition-colors duration-300 transform dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400 hover:underline md:my-0"
-              href="#"
-            >
-              Meraki UI
-            </a>
-            <a
-              className="mx-4 text-sm leading-5 text-gray-700 transition-colors duration-300 transform dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400 hover:underline md:my-0"
-              href="#"
-            >
-              CPP
-            </a>
-            <a
-              className="mx-4 text-sm leading-5 text-gray-700 transition-colors duration-300 transform dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400 hover:underline md:my-0"
-              href="#"
-            >
-              JavaScript
-            </a>
-            <a
-              className="mx-4 text-sm leading-5 text-gray-700 transition-colors duration-300 transform dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400 hover:underline md:my-0"
-              href="#"
-            >
-              Ruby
-            </a>
-            <a
-              className="mx-4 text-sm leading-5 text-gray-700 transition-colors duration-300 transform dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400 hover:underline md:my-0"
-              href="#"
-            >
-              Mysql
-            </a>
-            <a
-              className="mx-4 text-sm leading-5 text-gray-700 transition-colors duration-300 transform dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400 hover:underline md:my-0"
-              href="#"
-            >
-              Pest
-            </a>
-            <a
-              className="mx-4 text-sm leading-5 text-gray-700 transition-colors duration-300 transform dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400 hover:underline md:my-0"
-              href="#"
-            >
-              PHPUnit
-            </a>
-            <a
-              className="mx-4 text-sm leading-5 text-gray-700 transition-colors duration-300 transform dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400 hover:underline md:my-0"
-              href="#"
-            >
-              Netlify
-            </a>
-            <a
-              className="mx-4 text-sm leading-5 text-gray-700 transition-colors duration-300 transform dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400 hover:underline md:my-0"
-              href="#"
-            >
-              VS Code
-            </a>
-            <a
-              className="mx-4 text-sm leading-5 text-gray-700 transition-colors duration-300 transform dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400 hover:underline md:my-0"
-              href="#"
-            >
-              PHPStorm
-            </a>
-            <a
-              className="mx-4 text-sm leading-5 text-gray-700 transition-colors duration-300 transform dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400 hover:underline md:my-0"
-              href="#"
-            >
-              Sublime
-            </a>
+          {/* Mobile Search - Visible only on mobile */}
+          <div className="mt-4 md:hidden">
+            <div className="relative">
+              <input
+                type="text"
+                className="w-full px-4 py-2.5 text-sm text-gray-700 bg-gray-50 rounded-lg border border-gray-200 focus:border-blue-400 focus:ring-2 focus:ring-blue-100 dark:bg-gray-700 dark:border-gray-600 dark:text-gray-300"
+                placeholder="Search..."
+              />
+              <button className="absolute right-3 top-1/2 -translate-y-1/2">
+                <svg
+                  className="w-5 h-5 text-gray-400"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+                  />
+                </svg>
+              </button>
+            </div>
+          </div>
+
+          {/* Mobile Navigation Menu */}
+          <div className="md:hidden mt-4 border-t border-gray-100 dark:border-gray-700 pt-4">
+            <nav className="flex flex-col space-y-2">
+              <a href="#" className="text-gray-700 hover:text-blue-500 dark:text-gray-200 dark:hover:text-blue-400 py-2">
+                Home
+              </a>
+              <a href="#" className="text-gray-700 hover:text-blue-500 dark:text-gray-200 dark:hover:text-blue-400 py-2">
+                Products
+              </a>
+              <a href="#" className="text-gray-700 hover:text-blue-500 dark:text-gray-200 dark:hover:text-blue-400 py-2">
+                Resources
+              </a>
+              <a href="#" className="text-gray-700 hover:text-blue-500 dark:text-gray-200 dark:hover:text-blue-400 py-2">
+                Pricing
+              </a>
+              <a href="#" className="text-gray-700 hover:text-blue-500 dark:text-gray-200 dark:hover:text-blue-400 py-2">
+                About Us
+              </a>
+              <a href="#" className="text-gray-700 hover:text-blue-500 dark:text-gray-200 dark:hover:text-blue-400 py-2">
+                Contact
+              </a>
+            </nav>
+
+            <div className="mt-4 flex flex-col space-y-2">
+              <button className="w-full px-4 py-2 text-sm font-medium text-gray-700 hover:text-blue-500 dark:text-gray-200 border border-gray-200 dark:border-gray-600 rounded-lg">
+                Sign in
+              </button>
+              <button className="w-full px-4 py-2 text-sm font-medium text-white bg-blue-500 rounded-lg hover:bg-blue-600">
+                Sign up
+              </button>
+            </div>
+          </div>
+
+          {/* Categories Bar */}
+          <div className="mt-4 -mx-6 px-6 py-2 border-t border-gray-100 dark:border-gray-700 overflow-x-auto whitespace-nowrap scrollbar-hide">
+            <div className="flex justify-center space-x-4 lg:space-x-8">
+              <a
+                href="#"
+                className="text-sm lg:text-base text-gray-600 hover:text-blue-500 dark:text-gray-300"
+              >
+                Development
+              </a>
+              <a
+                href="#"
+                className="text-sm lg:text-base text-gray-600 hover:text-blue-500 dark:text-gray-300"
+              >
+                Design
+              </a>
+              <a
+                href="#"
+                className="text-sm lg:text-base text-gray-600 hover:text-blue-500 dark:text-gray-300"
+              >
+                Marketing
+              </a>
+              <a
+                href="#"
+                className="text-sm lg:text-base text-gray-600 hover:text-blue-500 dark:text-gray-300"
+              >
+                Business
+              </a>
+              <a
+                href="#"
+                className="text-sm lg:text-base text-gray-600 hover:text-blue-500 dark:text-gray-300"
+              >
+                Lifestyle
+              </a>
+              <a
+                href="#"
+                className="text-sm lg:text-base text-gray-600 hover:text-blue-500 dark:text-gray-300"
+              >
+                Photography
+              </a>
+              <a
+                href="#"
+                className="text-sm lg:text-base text-gray-600 hover:text-blue-500 dark:text-gray-300"
+              >
+                Music
+              </a>
+            </div>
           </div>
         </div>
       </nav>

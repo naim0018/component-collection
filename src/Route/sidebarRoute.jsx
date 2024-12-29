@@ -2,6 +2,7 @@ import Accordion from "../Component/Accordion/Accordion";
 import Button from "../Component/Button/Button";
 import Card from "../Component/Card/Card";
 import CardDetails from "../Component/CardDetails/CardDetails";
+import Carousel from "../Component/Carousel/Carousel";
 import ContactUs from "../Component/ContactUs/ContactUs";
 import Divider from "../Component/Divider/Divider";
 import ErrorPage from "../Component/ErrorPage/ErrorPage";
@@ -47,6 +48,11 @@ const sidebarRoute = [
     name: "Card",
     path: "card",
     element: <Card />,
+  },
+  {
+    name: "Carousel",
+    path: "carousel",
+    element: <Carousel/>,
   },
   {
     name: "Info-Card",
