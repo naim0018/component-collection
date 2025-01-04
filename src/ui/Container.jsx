@@ -91,7 +91,7 @@ const Container = ({ children, code }) => {
             toggle ? 'block' : 'hidden'
           }`}
         >
-          <div className="p-8 bg-white rounded-b-xl">
+          <div className="p-8 bg-gray-50 rounded-b-xl">
             <div className="">
               {children}
             </div>

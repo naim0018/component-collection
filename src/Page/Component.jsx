@@ -4,6 +4,7 @@ const Component = () => {
   return (
     <div className="">
     <Sidebar/>
+    
     </div>
   )
 }

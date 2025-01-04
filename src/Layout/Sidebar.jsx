@@ -6,7 +6,7 @@ const Sidebar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <div className='flex flex-col lg:flex-row min-h-screen bg-gradient-to-br from-gray-900 to-gray-800'>
+    <div className='flex flex-col lg:flex-row min-h-screen bg-gray-900'>
       {/* Mobile Menu Button */}
       <button 
         onClick={() => setIsOpen(!isOpen)}
@@ -27,7 +27,7 @@ const Sidebar = () => {
       </button>
 
       {/* Sidebar */}
-      <div className={`lg:min-h-screen backdrop-blur-xl bg-black/20 fixed lg:relative z-10 transition-transform duration-300 ease-in-out ${
+      <div className={`lg:min-h-screen  backdrop-blur-xl bg-black/20 fixed lg:relative z-10 transition-transform duration-300 ease-in-out ${
         isOpen ? 'translate-x-0' : '-translate-x-full lg:translate-x-0'
       }`}>
         <div className='p-6'>
@@ -87,8 +87,8 @@ const Sidebar = () => {
         />
       )}
       
-      <div className="flex-1 p-6 lg:p-10">
-        <div className='max-w-6xl mx-auto'>
+      <div className="flex-1 p-6 lg:p-10 bg-gray-800">
+        <div className='max-w-6xl mx-auto '>
           <Outlet />
         </div>
       </div>
