@@ -7,7 +7,7 @@ const MainLayout = () => {
   const Navbar = () => {
     const navLinks = [
       { path: '/', name: 'Home' },
-      { path: '/component/navbar', name: 'Components' },
+      { path: '/component', name: 'Components' },
       { path: '/about-us', name: 'About Us' }
     ]
 
