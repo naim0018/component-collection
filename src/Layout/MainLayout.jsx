@@ -7,12 +7,12 @@ const MainLayout = () => {
   const Navbar = () => {
     const navLinks = [
       { path: '/', name: 'Home' },
-      { path: '/component', name: 'Components' },
+      { path: '/component/navbar', name: 'Components' },
       { path: '/about-us', name: 'About Us' }
     ]
 
     return (
-      <nav className="bg-[#0F172A] shadow-lg">
+      <nav className="bg-[#0F172A] shadow-lg border-b border-white/20 ">
         <div className="container mx-auto px-4">
           <div className="flex items-center justify-center h-16">
             <div className="flex items-center">

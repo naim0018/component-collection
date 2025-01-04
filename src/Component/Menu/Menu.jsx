@@ -6,7 +6,7 @@ import Menu05 from "./Menu05"
 
 const Menu = () => {
   return (
-    <div>
+    <div className="space-y-5">
         <Menu01/>
         <Menu02/>
         <Menu03/>

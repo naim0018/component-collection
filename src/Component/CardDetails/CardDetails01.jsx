@@ -85,7 +85,7 @@ const CardDetails01 = () => {
 </section>`
   return (
     <Container code={code}>
-        <section className="text-gray-600 body-font overflow-hidden">
+        <section className="text-gray-600 body-font overflow-hidden bg-white">
   <div className="container px-5 py-24 mx-auto">
     <div className="lg:w-4/5 mx-auto flex flex-wrap">
       <img alt="e-commerce" className="lg:w-1/2 w-full lg:h-auto h-64 object-cover object-center rounded" src="https://dummyimage.com/400x400"/>
