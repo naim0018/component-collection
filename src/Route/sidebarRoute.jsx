@@ -19,6 +19,7 @@ import ProductCollection from "../Component/ProductCollection/ProductCollection"
 import Reviews from "../Component/Reviews/Reviews";
 import Search from "../Component/Search/Search";
 import SignUp from "../Component/SignUp/SignUp";
+import Slider from "../Component/Slider/Slider";
 import Social from "../Component/Social/Social";
 import Switch from "../Component/Switch/Switch";
 import TextAnimation from "../Component/TextAnimation/TextAnimation";
@@ -53,6 +54,11 @@ const sidebarRoute = [
     name: "Carousel",
     path: "carousel",
     element: <Carousel/>,
+  },
+  {
+    name: "Slider",
+    path: "slider",
+    element: <Slider/>,
   },
   {
     name: "Info-Card",
